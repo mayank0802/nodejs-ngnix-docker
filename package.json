@@ -1,0 +1,11 @@
+{
+    "dependencies": {
+        "express": "*",
+        "nodemon" :"2.0.4",
+        "nginx": "*"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon"
+    }
+}
