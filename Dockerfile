@@ -25,4 +25,4 @@ COPY ./package.json ./app
 RUN npm install
 COPY . .
 CMD ["node", "index.js"]
-EXPOSE 80
+EXPOSE 3000
