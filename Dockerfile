@@ -2,10 +2,11 @@
 
 FROM node:alpine AS builder
 WORKDIR '/app'
-COPY ./package.json ./
-RUN npm install
+#COPY ./package.json ./
 COPY . .
-RUN npm run build
+
+RUN npm install
+#RUN npm run build
 
 #Run Phase
 FROM nginx
