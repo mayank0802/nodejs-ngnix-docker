@@ -4,4 +4,4 @@ WORKDIR /app
 COPY . .
 COPY config/nginx.default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
-#CMD node index.js
+CMD node index.js
