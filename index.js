@@ -2,7 +2,6 @@ const express = require('express');
 const nginx = require('nginx');
 
 const app = express();
-const client = nginx.createClient();
 app.get('/', (req, res) => {
     res.send("Hello World");
 });
