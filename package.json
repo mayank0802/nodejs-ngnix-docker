@@ -1,10 +1,32 @@
 {
-    "dependencies": {
-        "express": "*",
-        "nodemon" :"2.0.4",
-    },
-    "scripts": {
-        "start": "node index.js",
-        "dev": "nodemon"
-    }
+  "name": "nodejs-ngnix-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adi3012Mhjn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adi3012Mhjn/nodejs-ngnix-docker/issues"
+  },
+  "homepage": "https://github.com/Adi3012Mhjn/nodejs-ngnix-docker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pm2": "^4.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.2",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2"
+  }
 }
