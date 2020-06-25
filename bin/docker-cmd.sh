@@ -2,7 +2,7 @@
 set -e
 set -x
 
-NODE_ENV="${NODE_ENV:-development}"
+NODE_ENV="${NODE_ENV:-production}"
 SCRIPT_HOME=`dirname $0`
 PROJECT_HOME="${SCRIPT_HOME}/.."
 
@@ -17,3 +17,5 @@ cp "${PROJECT_HOME}/config/nginx.default.conf" /etc/nginx/conf.d/default.conf
 
 # start nginx
 nginx -g 'daemon off;'
+# start node
+npm start
