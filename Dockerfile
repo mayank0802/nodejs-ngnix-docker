@@ -1,6 +1,6 @@
 #version nodejs-10.9.0
 #version nginx 1.15
-FROM ppdeassis/node-nginx-alpine:latest
+FROM pasientskyhosting/nginx-nodejs
 #FROM mhart/alpine-node:latest
 #FROM mhart/alpine-node:12
 
@@ -14,4 +14,4 @@ RUN npm install
 COPY . .
 COPY config/nginx.default.conf /etc/nginx/conf.d/default.conf
 CMD service nginx start && node app.js
-EXPOSE 80
+EXPOSE 3000
