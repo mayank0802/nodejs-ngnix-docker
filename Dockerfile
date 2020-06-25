@@ -8,7 +8,7 @@ COPY . .
 RUN npm run build
 
 #Run Phase
-FROM nginx:latest
+FROM nginx
 COPY --from=builder /app/build /usr/share/nginx/html
 
 # Copy the default nginx.conf provided by tiangolo/node-frontend
