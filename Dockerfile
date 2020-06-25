@@ -6,5 +6,5 @@ RUN npm install
 COPY . .
 COPY config/nginx.default.conf /etc/nginx/conf.d/default.conf
 
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
 EXPOSE 80
