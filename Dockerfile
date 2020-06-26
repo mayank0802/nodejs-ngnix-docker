@@ -13,7 +13,7 @@ RUN apt-get update && \
 
 # Install nodemon
 RUN npm install -g nodemon
-ADD package.json /package.json
+ADD package.json .
 RUN npm install
 RUN apt-get update \
     && apt-get install -y nginx
