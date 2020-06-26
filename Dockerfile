@@ -4,7 +4,7 @@
 FROM ubuntu:16.04
 WORKDIR /app
 COPY . .
-
+RUN apt-get install sudo
 
 RUN apt-get update && \
     apt-get -y install curl && \
