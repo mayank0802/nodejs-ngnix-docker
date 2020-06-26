@@ -18,5 +18,5 @@ RUN npm install
 RUN apt-get update \
     && apt-get install -y nginx
 COPY config/nginx.default.conf /etc/nginx/nginx.conf
-RUN service restart nginx 
+RUN systemctl restart nginx 
 CMD node index.js
