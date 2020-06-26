@@ -23,4 +23,4 @@ RUN apt-get update \
 #RUN sudo systemctl restart nginx 
 #CMD nginx -g daemon off
 # && npm start
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"] && ["node", "index.js"]
