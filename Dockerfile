@@ -6,6 +6,6 @@ WORKDIR /app
 COPY . .
 RUN npm install
 RUN yum install nginx
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY config/nginx.default.conf /etc/nginx/nginx.conf
 RUN service nginx restart
 CMD node index.js
