@@ -7,13 +7,10 @@ COPY . .
 RUN apt-get update -q  \
  && apt-get install -yqq \
  curl \
- git \
  ssh \
- gcc \
  make \
  build-essential \
  libkrb5-dev \
- sudo \
  vim \
  net-tools \
  apt-utils \
