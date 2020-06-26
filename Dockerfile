@@ -4,6 +4,22 @@
 FROM ubuntu
 WORKDIR /app
 COPY . .
+RUN apt-get update -q  \
+ && apt-get install -yqq \
+ curl \
+ git \
+ ssh \
+ gcc \
+ make \
+ build-essential \
+ libkrb5-dev \
+ sudo \
+ vim \
+ net-tools \
+ apt-utils \
+ supervisor \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN apt-get update && \
     apt-get -y install curl && \
     curl -sL https://deb.nodesource.com/setup_14.x | sudo bash - && \
