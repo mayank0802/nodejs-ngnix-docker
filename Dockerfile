@@ -4,3 +4,19 @@
 FROM ubuntu:16.04
 WORKDIR /app
 COPY . .
+
+
+RUN apt-get update && \
+    apt-get -y install curl && \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get -y install python build-essential nodejs
+
+# Install nodemon
+RUN npm install -g nodemon
+ADD package.json /package.json
+RUN npm install
+RUN apt-get update \
+    && apt-get install -y nginx
+COPY config/nginx.default.conf /etc/nginx/nginx.conf
+RUN service restart nginx 
+CMD node index.js
