@@ -13,6 +13,6 @@ RUN npm install
 RUN npm install express
 COPY . .
 COPY config/nginx.default.conf /etc/nginx/conf.d/default.conf
-RUN apt-get install --only-upgrade nodejs
+RUN apt-get install  node
 CMD service nginx start && node index.js
 EXPOSE 3000
