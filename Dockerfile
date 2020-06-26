@@ -17,7 +17,7 @@ ADD package.json .
 RUN npm install
 RUN apt-get update \
     && apt-get install -y nginx
-COPY config/nginx.default.conf /etc/nginx/nginx.conf
+COPY config/nginx.default.conf /etc/nginx
 #COPY start.sh /
 #CMD [ "/bin/sh", "/start.sh" ]
 #RUN sudo systemctl restart nginx 
