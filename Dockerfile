@@ -7,7 +7,7 @@ COPY . .
 RUN apt-get update && \
     apt-get -y install curl && \
     curl -sL https://deb.nodesource.com/setup_14.x | sudo bash - && \
-    apt-get -y install nodejs
+    apt-get -y install python build-essential nodejs
 
 # Install nodemon
 RUN npm install -g nodemon
