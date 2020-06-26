@@ -5,7 +5,7 @@ FROM node:14.4.0-stretch
 WORKDIR /app
 COPY . .
 RUN npm install
-RUN yum install nginx
+RUN apt-get install nginx
 COPY config/nginx.default.conf /etc/nginx/nginx.conf
 RUN service nginx restart
 CMD node index.js
