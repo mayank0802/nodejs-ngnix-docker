@@ -11,7 +11,7 @@ WORKDIR /app
 COPY ./package*.json ./app
 RUN npm install
 RUN npm install express
-COPY . .
+COPY . /usr/src/app
 COPY config/nginx.default.conf /etc/nginx/conf.d/default.conf
 RUN apt-get install --only-upgrade nodejs
 CMD service nginx start && node app.js
