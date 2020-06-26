@@ -13,6 +13,6 @@ WORKDIR /app
 COPY ./package*.json ./app
 RUN npm install
 COPY . .
-COPY config/nginx.default.conf /etc/nginx/conf.d/default.conf
+#COPY config/nginx.default.conf /etc/nginx/conf.d/default.conf
 CMD service nginx start && node app.js
 EXPOSE 3000
