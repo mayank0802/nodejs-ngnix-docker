@@ -12,6 +12,6 @@ COPY ./package*.json ./app
 RUN npm install
 RUN npm install express
 COPY . .
-COPY config/nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY config/nginx/nginx.default.conf /etc/nginx/conf.d/default.conf
 CMD service nginx start && node index.js
 EXPOSE 3000
