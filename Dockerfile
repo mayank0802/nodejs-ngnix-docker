@@ -6,7 +6,6 @@ FROM pasientskyhosting/nginx-nodejs
 
 #ARG NODE_ENV=production
 #ENV $NODE_ENV
-ENV 14.4.0
 # lets install dependencies
 WORKDIR /app
 COPY ./package*.json ./app
