@@ -1,18 +1,11 @@
   
 #version nodejs-10.9.0
 #version nginx 1.15
-FROM pasientskyhosting/nginx-nodejs
-#FROM mhart/alpine-node:latest
-#FROM mhart/alpine-node:12
-
-#ARG NODE_ENV=production
-#ENV $NODE_ENV
-
-# lets install dependencies
+FROM node:14.4.0-stretch
 WORKDIR /app
-COPY ./package*.json ./app
-RUN npm install
 COPY . .
-#COPY config/nginx.default.conf /etc/nginx/conf.d/default.conf
-CMD service nginx start && node app.js
-EXPOSE 3000
+RUN npm install
+RUN yum install nginx
+COPY nginx.conf /etc/nginx/nginx.conf
+RUN service nginx restart
+CMD node index.js
