@@ -4,9 +4,6 @@
 FROM ubuntu
 WORKDIR /app
 COPY . .
-RUN apt-get update -q  \
- && apt-get install -yqq \
- && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN apt-get update && \
     apt-get -y install curl && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
