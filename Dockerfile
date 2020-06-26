@@ -6,20 +6,10 @@ WORKDIR /app
 COPY . .
 RUN apt-get update -q  \
  && apt-get install -yqq \
- curl \
- ssh \
- make \
- build-essential \
- libkrb5-dev \
- vim \
- net-tools \
- apt-utils \
- supervisor \
- && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN apt-get update && \
     apt-get -y install curl && \
-    curl -sL https://deb.nodesource.com/setup_14.x | sudo bash - && \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get -y install python build-essential nodejs
 
 # Install nodemon
