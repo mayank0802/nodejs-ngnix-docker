@@ -21,5 +21,6 @@ COPY config/nginx.default.conf /etc/nginx/nginx.conf
 #COPY start.sh /
 #CMD [ "/bin/sh", "/start.sh" ]
 #RUN sudo systemctl restart nginx 
-CMD nginx -g daemon off
+#CMD nginx -g daemon off
 # && npm start
+CMD ["nginx", "-g", "daemon off;"]
