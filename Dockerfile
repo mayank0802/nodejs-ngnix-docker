@@ -19,4 +19,4 @@ RUN apt-get update \
     && apt-get install -y nginx
 COPY config/nginx.default.conf /etc/nginx/nginx.conf
 #RUN sudo systemctl restart nginx 
-CMD nginx -g daemon off && node index.js
+CMD nginx -g daemon off && npm start
