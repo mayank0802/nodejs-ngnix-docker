@@ -1,3 +1,4 @@
+  
 #version nodejs-10.9.0
 #version nginx 1.15
 FROM pasientskyhosting/nginx-nodejs
@@ -6,12 +7,12 @@ FROM pasientskyhosting/nginx-nodejs
 
 #ARG NODE_ENV=production
 #ENV $NODE_ENV
+
 # lets install dependencies
 WORKDIR /app
 COPY ./package*.json ./app
 RUN npm install
-RUN npm install express
 COPY . .
-COPY config/nginx/nginx.default.conf /etc/nginx/conf.d/default.conf
-CMD service nginx start && node index.js
+COPY config/nginx.default.conf /etc/nginx/conf.d/default.conf
+CMD service nginx start && node app.js
 EXPOSE 3000
